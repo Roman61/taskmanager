@@ -1,0 +1,9 @@
+app/models/__pycache__/task.cpython-312.pyc
+app/models/__pycache__/user.cpython-312.pyc
+app/backend/__pycache__/db.cpython-312.pyc
+app/backend/__pycache__/__init__.cpython-312.pyc
+app/__pycache__/__init__.cpython-312.pyc
+taskmanager.db
+app/migrations/__pycache__/env.cpython-312.pyc
+app/migrations/versions/__pycache__/082d9ff33961_initial_migration.cpython-312.pyc
+app/models/__pycache__/__init__.cpython-312.pyc
