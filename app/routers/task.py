@@ -11,7 +11,7 @@ from app.schemas import CreateUser, UpdateUser
 from sqlalchemy import insert, select, update, delete
 # Функция создания slug-строки
 from slugify import slugify
-from app.schema import CreateTask
+from app.schemas import CreateTask
 
 router = APIRouter(prefix="/task", tags=["task"])
 
@@ -36,10 +36,10 @@ async def task_by_id():
 async def create_task(db: Annotated[Session, Depends(get_db)], createtask: CreateTask, user_id):
     if user_id:
         db.execute(insert(Task).values(title=createtask.title,
-                                       content=createtask.content,
-                                       priority=createtask.priority,
-                                       user_id=user_id,
-                                       slug=slugify(createtask.title)))
+                                        content=createtask.content,
+                                        priority=createtask.priority,
+                                        user_id=user_id,
+                                        slug=slugify(createtask.title)))
         db.commit()
         return {
             'status_code': status.HTTP_201_CREATED,
