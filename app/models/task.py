@@ -21,7 +21,6 @@ class Task(Base):
     completed = Column(Boolean, default=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     slug = Column(String, unique=True, index=True, nullable=True)
-
     user = relationship("User", back_populates="tasks")
 
 
